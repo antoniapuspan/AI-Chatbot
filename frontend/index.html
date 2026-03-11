@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internal IT Helpdesk Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <div class="brand">
+        <img src="assets/Ikea_logo.png" alt="IKEA" class="brand-logo" />
+        <div class="brand-text">
+          <p class="brand-kicker">IKEA Internal Systems</p>
+          <h1>IT Helpdesk Assistant</h1>
+        </div>
+      </div>
+      <span class="tool-chip">For internal use</span>
+    </header>
+
+    <header class="header card hero-card">
+      <h2>Quickly resolve common IT issues</h2>
+      <p>Choose the incident type and answer the guided questions to get troubleshooting steps.</p>
+    </header>
+
+    <section class="card">
+      <h2>1. Choose an IT Issue</h2>
+      <div id="issueButtons" class="button-grid"></div>
+    </section>
+
+    <section id="questionsSection" class="card hidden">
+      <h2>2. Answer Follow-up Questions</h2>
+      <p id="selectedIssue" class="muted"></p>
+      <div id="questionsContainer"></div>
+      <button id="solveBtn" type="button" class="primary-btn" disabled>Get Solution</button>
+    </section>
+
+    <section id="resultSection" class="card hidden">
+      <h2>3. Solution</h2>
+      <div id="resultContent"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

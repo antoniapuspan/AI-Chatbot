@@ -1,0 +1,254 @@
+:root {
+  --ikea-blue: #0058a3;
+  --ikea-yellow: #ffda1a;
+  --bg: #f5f8fc;
+  --surface: #ffffff;
+  --text: #10253f;
+  --muted: #566a80;
+  --border: #c9d6e5;
+  --primary: var(--ikea-blue);
+  --primary-hover: #003f76;
+  --success-bg: #eef8f1;
+  --alert-bg: #fff7d2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Segoe UI", Tahoma, Arial, sans-serif;
+  background:
+    radial-gradient(circle at 100% 0, #e4eef9 0, transparent 46%),
+    linear-gradient(180deg, #f1f7fe 0%, #f8fbff 100%);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 18px 16px 40px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-logo {
+  width: 120px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0, 32, 63, 0.18);
+}
+
+.brand-kicker {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 1.7rem;
+  letter-spacing: 0.01em;
+}
+
+.tool-chip {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #d9c100;
+  background: var(--ikea-yellow);
+  color: #27313d;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+}
+
+.header {
+  margin-bottom: 16px;
+}
+
+.hero-card {
+  border-left: 6px solid var(--ikea-blue);
+}
+
+.hero-card h2 {
+  margin: 0;
+}
+
+.hero-card p {
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px;
+  margin-top: 14px;
+  box-shadow: 0 10px 24px rgba(5, 46, 89, 0.06);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.issue-btn,
+.answer-btn,
+.primary-btn {
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.18s ease;
+}
+
+.issue-btn:hover,
+.answer-btn:hover,
+.primary-btn:hover {
+  border-color: #88a6c5;
+  transform: translateY(-1px);
+}
+
+.issue-btn.active,
+.answer-btn.active {
+  background: #e8f0fb;
+  border-color: var(--ikea-blue);
+  box-shadow: inset 0 0 0 1px var(--ikea-blue);
+}
+
+.question-block {
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.question-title {
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.answer-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.primary-btn {
+  margin-top: 8px;
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  font-weight: 700;
+}
+
+.primary-btn:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.primary-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.result-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.meta-box {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  background: #f9fcff;
+}
+
+.meta-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.meta-value {
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.steps {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.notice {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--alert-bg);
+  border: 1px solid #e7cc4d;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  background: #fff2f2;
+  border: 1px solid #f0bfc3;
+  color: #8d1020;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .brand-logo {
+    width: 100px;
+  }
+
+  .brand h1 {
+    font-size: 1.35rem;
+  }
+
+  .button-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-meta {
+    grid-template-columns: 1fr;
+  }
+}
